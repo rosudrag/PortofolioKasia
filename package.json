@@ -2,6 +2,9 @@
   "name": "portfoliokasia",
   "version": "1.0.0",
   "description": "Portfolio - cms controlled - for Kasia",
+  "engines": {
+    "node": "4.2.1"
+  },
   "main": "app.js",
   "dependencies": {
     "express": "^4.13.4",
