@@ -1,0 +1,23 @@
+{
+  "name": "portfoliokasia",
+  "version": "1.0.0",
+  "description": "Portfolio - cms controlled - for Kasia",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosudrag/PortofolioKasia.git"
+  },
+  "author": "Dragos Romario Rosu",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rosudrag/PortofolioKasia/issues"
+  },
+  "homepage": "https://github.com/rosudrag/PortofolioKasia#readme"
+}
