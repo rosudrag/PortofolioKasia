@@ -7,8 +7,8 @@
   },
   "main": "app.js",
   "dependencies": {
-    "bulma": "0.0.26",
     "express": "^4.13.4",
+    "flexboxgrid": "^6.3.0",
     "jade": "^1.11.0"
   },
   "devDependencies": {},

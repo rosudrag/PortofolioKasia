@@ -1,0 +1,23 @@
+.banner {
+  background-color: #7175ad
+}
+
+.contact-info {
+  background-color: #ba8426
+}
+
+.music-panel {
+  background-color: #d2d987
+}
+
+.business-panel {
+  background-color: #d98ecf
+}
+
+.footer{
+  background-color: #7175ad
+}
+
+.is-hidden {
+  display: none;
+}
