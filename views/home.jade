@@ -2,6 +2,7 @@ html
   head
     title= title
     link(href='/css/flexboxgrid.css', rel='stylesheet')
+    link(href='/css/bootstrap.css', rel='stylesheet')
     link(href='/styles/main.css', rel='stylesheet')
     link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel='stylesheet')
     
@@ -13,23 +14,23 @@ html
     
       ga('create', 'UA-77562801-1', 'auto');
       ga('send', 'pageview');
-  body
-    div.row.center-xs
-      div.col-xs-12.banner
-        span Portfolio Banner / logo / photo
-    div.row.center-xs
-      div.col-xs-12.contact-info
-        span Contact info
-    div.row.center-xs
-      div.col-xs-12.center-xs.is-hidden
-        button button-music
-        button button-business
-      div.col-xs-6.music-panel
-        span left
-      div.col-xs-6.business-panel
-        span right
-        
-  footer
-    div.row.center-xs.footer
-      div.col-xs-12
-        Span Create by DRR
+  body.Site.container
+    main.Site-content
+      div.row.center-xs
+        div.col-xs-12.banner
+          span Portfolio Banner / logo / photo
+      div.row.center-xs
+        div.col-xs-12.contact-info
+          span Contact info
+      div.row.center-xs
+        div.col-xs-12.center-xs.is-hidden
+          button button-music
+          button button-business
+        div.col-xs-6.music-panel
+          span left
+        div.col-xs-6.business-panel
+          span right
+    footer
+      div.row.center-xs.footer
+        div.col-xs-12
+          Span Create by DRR
