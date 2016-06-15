@@ -1,17 +1,19 @@
 mixin top()
-  div.row.middle-xs
-    div.col-xs-12.col-sm-6
-      div.row.center-xs
-        +img-circle-responsive("/kasia-round-75.png","Circle image")
-    div.col-xs-12.col-sm-6
-      div.row.center-xs.bottom-xs
-        div.col-xs-12
-          h1.h2
-            strong Katarzyna Niedziela
-        div.col-xs-12
-          h2.h3 Writter at Home Sweet Home
-        div.col-xs-12.center-xs
+  div.row
+    div.col-xs-12
+      div.jumbotron.row.middle-xs
+        div.col-xs-12.col-sm-6
           div.row.center-xs
-            button.btn.btn-success
-                span.glyphicon.glyphicon-envelope
-                span.xs-pl-5 Contact Me
+            +img-circle-responsive("/kasia-round-75.png","Circle image")
+        div.col-xs-12.col-sm-6
+          div.row.center-xs.bottom-xs
+            div.col-xs-12
+              h1.h2
+                strong Katarzyna Niedziela
+            div.col-xs-12
+              h2.h3 Writter at Home Sweet Home
+            div.col-xs-12.center-xs
+              div.row.center-xs
+                button.btn.btn-success
+                    span.glyphicon.glyphicon-envelope
+                    span.xs-pl-5 Contact Me

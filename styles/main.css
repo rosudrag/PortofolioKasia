@@ -15,18 +15,34 @@
   background-color: #ba8426
 }
 
-.music-panel {
-  background-color: #d2d987
-}
-
-.business-panel {
-  background-color: #d98ecf
-}
-
 .footer{
   background-color: #7175ad
 }
 
 .is-hidden {
   display: none;
+}
+
+body{
+  background-color:  #ffffff;
+}
+
+.yellow{
+  background-color: #cced5f;
+}
+
+.blue{
+  background-color: rgb(90, 96, 231)
+}
+
+.box-grey{
+  background-color: #666666;
+}
+
+.box-grey-light{
+  background-color: #999999;
+}
+
+.box-round{
+  
 }
