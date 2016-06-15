@@ -54,20 +54,28 @@ html(lang="en")
     meta(name="author",content="Dragos Romario Rosu")
     link(rel="icon",href="../../favicon.ico")
     block styles
-      link(href='/css/flexboxgrid.css', rel='stylesheet')
-      link(href='/css/bootstrap.css', rel='stylesheet')
+      link(href='https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.0/flexboxgrid.min.css', rel='stylesheet')
+      link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet')
       link(href='/css/less-space.css', rel='stylesheet')
       link(href='/styles/main.css', rel='stylesheet')
+      link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.min.css', rel=rel='stylesheet')
       link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel='stylesheet')
   body(data-spy="scroll",data-target=".scrollspy", class="Site container")
     main.Site-content.xs-mt-5
-      div.row.middle-xs.center-xs
-        div.col-xs-4
-          +img-circle-responsive("/kasia-round.png","Circle image")
-        div.col-xs-8
-          span Katarzyna Niedziela
-          br
-          span "Chill and thrill"
+      div.row.middle-xs
+        div.col-xs-12.col-sm-6
+          div.row.center-xs
+            +img-circle-responsive("/kasia-round-75.png","Circle image")
+        div.col-xs-12.col-sm-6
+          div.row.center-xs
+            div.col-xs-12
+              h1 Katarzyna Niedziela
+            div.col-xs-12
+              h2 Writter
+            div.col-xs-12
+              button
+                span.glyphicon.glyphicon-envelope
+                span Contact Me
       div.row.center-xs
         div.col-xs-12
           span Contact info
