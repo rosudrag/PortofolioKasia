@@ -42,6 +42,8 @@ include ../node_modules/jade-bootstrap/components/images
 //- Including Bootswatch theme mixins
 include ../node_modules/jade-bootstrap/components/bootswatch
 
+include ./custom_components/images
+
 html(lang="en")
   head
     title= title
@@ -54,18 +56,20 @@ html(lang="en")
     block styles
       link(href='/css/flexboxgrid.css', rel='stylesheet')
       link(href='/css/bootstrap.css', rel='stylesheet')
+      link(href='/css/less-space.css', rel='stylesheet')
       link(href='/styles/main.css', rel='stylesheet')
       link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', rel='stylesheet')
   body(data-spy="scroll",data-target=".scrollspy", class="Site container")
-    main.Site-content
-      div.row.middle-xs
-        div.col-xs-6
-          +img-circle("/main-image.jpg","Circle image")
-        div.col-xs-6
-          h1 Portfolio Banner / logo / photo
-          +alert-info("This is a sample info alert.")
+    main.Site-content.xs-mt-5
+      div.row.middle-xs.center-xs
+        div.col-xs-4
+          +img-circle-responsive("/kasia-round.png","Circle image")
+        div.col-xs-8
+          span Katarzyna Niedziela
+          br
+          span "Chill and thrill"
       div.row.center-xs
-        div.col-xs-12.contact-info
+        div.col-xs-12
           span Contact info
       div.row.center-xs
         div.col-xs-12.center-xs.is-hidden
