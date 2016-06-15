@@ -16,7 +16,7 @@ app.set('port', (process.env.PORT || 5000));
 
 //Routes
 app.get('/', function(req, res) {
-  res.render('home2', {
+  res.render('home', {
     title: 'Portfolio - Kasia'
   });
 });
