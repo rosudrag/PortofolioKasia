@@ -7,6 +7,10 @@
   flex:1 0 auto;
 }
 
+.flex-container{
+  flex:1;
+}
+
 .banner {
   background-color: #7175ad
 }
@@ -16,7 +20,6 @@
 }
 
 .footer{
-  background-color: #7175ad
 }
 
 .is-hidden {
@@ -24,7 +27,7 @@
 }
 
 body{
-  background-color:  #ffffff;
+  background-color:  #fffaeb;
 }
 
 .yellow{
@@ -33,6 +36,26 @@ body{
 
 .blue{
   background-color: rgb(90, 96, 231)
+}
+
+.light-green{
+  background-color: #a6d8af;
+}
+
+.light-yellow{
+  background-color: #fffaeb;
+}
+
+.grey{
+  background-color: #cccccc;
+}
+
+.light-pink{
+  background-color: #ffc5d9;
+}
+
+.panel{
+  background-color: #fdf5c9;
 }
 
 .box-grey{
@@ -44,5 +67,5 @@ body{
 }
 
 .box-round{
-  
+
 }

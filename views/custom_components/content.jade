@@ -1,8 +1,9 @@
 mixin content()
   div.row
-    div.col-xs-12
-      div.row.between-xs.top-xs
-        div.col-xs-12.col-sm-6.box-grey-light
-          +about_me()
-        div.col-xs-12.col-sm-4.box-grey-light.xs-mt-15.md-mt-0
-          +details()
+    div.flex-container.md-pl-15.md-pr-15
+      div.col-xs-12
+        div.row.between-xs.top-xs.xs-mt-10
+          div.col-xs-12.col-sm-6
+            +about_me()
+          div.col-xs-12.col-sm-4.xs-mt-15.md-mt-0
+            +details()
