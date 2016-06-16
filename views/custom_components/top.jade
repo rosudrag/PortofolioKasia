@@ -1,21 +1,22 @@
 mixin top()
-  div.row.light-green
-    div.flex-container.md-pl-15.md-pr-15
-      div.col-xs-12.xs-mt-10.xs-mb-10
-        div.row.middle-xs
-          div.col-xs-12.col-sm-6
-            div.row.center-xs
-              +img-circle-responsive("/kasia-round-75.png","Circle image")
-          div.col-xs-12.col-sm-6
-            div.row.center-xs.bottom-xs
-              div.col-xs-12
-                h1.h2
-                  strong Katarzyna Niedziela
-              div.col-xs-12
-                h2.h3 Writter at Home Sweet Home
-              div.col-xs-12.center-xs
-                div.row.center-xs
-                  +contact-me
+  div.row.light-green.center-xs
+    div.col-xs-12.col-md-9
+      div.flex-container
+        div.xs-mt-10.xs-mb-10
+          div.row.middle-xs
+            div.col-xs-12.col-sm-6
+              div.row.center-xs
+                +img-circle-responsive("/kasia-round-75.png","Circle image")
+            div.col-xs-12.col-sm-6
+              div.row.center-xs.bottom-xs
+                div.col-xs-12
+                  h1.h2
+                    strong Katarzyna Niedziela
+                div.col-xs-12
+                  h2.h3 Writter at Home Sweet Home
+                div.col-xs-12.center-xs
+                  div.row.center-xs
+                    +contact-me
 
 mixin contact-me()
   a(class="btn btn-success" href="mailto:ka.niedziel@gmail.com")
