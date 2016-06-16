@@ -1,18 +1,23 @@
 mixin about_me()
-  div.row.panel.panel-default
-    div.col-xs-12
-      div.xs-ml-10.md-ml-0
-        h2.h3 About Me
-        span I am an openminded history and journalism graduate with the soul of an artist. I play flute and love music; I enjoy drawing, painting and I am interested in visual arts and design. Whilst living in Poland I’ve worked in a newspaper writing articles. I enjoyed writing since I remember and I hope that one day I will write a book. I am always looking towards improving myself and consider myself an ambitious and hardworking person, agile and quick to pick up new skills. 
-
+  +panel-default()
+    h2.h4 About Me
+    span I am an openminded history and journalism graduate with the soul of an artist. I play flute and love music; I enjoy drawing, painting and I am interested in visual arts and design. Whilst living in Poland I’ve worked in a newspaper writing articles. I enjoyed writing since I remember and I hope that one day I will write a book. I am always looking towards improving myself and consider myself an ambitious and hardworking person, agile and quick to pick up new skills. 
+            
+    
 
 mixin details()
-  div.row.panel.panel-default
-    div.xs-ml-10.md-ml-0
-      div.col-xs-12
-        h2.h3 My Details
-      div.col-xs-12
-        span ka.niedziel@gmail.com
-      div.col-xs-12
-        span linkedin
-    
+  +panel-default()  
+    h2.h4 My Details
+    span ka.niedziel@gmail.com
+    br
+    span linkedin
+        
+mixin panel-default()
+  div.row
+    div.col-xs-12
+      div.panel.panel-default
+        div.panel-body
+          if block
+            block
+          else
+            p No content provided
