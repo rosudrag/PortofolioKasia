@@ -14,16 +14,20 @@ mixin top()
                     strong Katarzyna Niedziela
                 div.col-xs-12
                   h2.h3 Looking for new opportunities
-                div.col-xs-12.center-xs
-                  div.row.center-xs
-                    +contact-me
+                div.col-xs-12
+                  +contact-me
 
 mixin contact-me()
-  div.row.middle-xs
-    div.col-xs-6
+  div.row
+    div.col-xs-6.col-md-4
       a(class="btn btn-success" href="mailto:ka.niedziel@gmail.com")
-        span.glyphicon.glyphicon-envelope
+        i.glyphicon.glyphicon-envelope
         span.xs-pl-10 Contact Me
-    div.col-xs-6
-      a(class="btn btn-social-icon btn-linkedin" href="https://uk.linkedin.com/in/katarzyna-niedziela-a4895b5b/en")
+    div.col-xs-6.xs-pr-30.col-md-4
+      a(class="btn btn-cv" href="/CV/cv.pdf")
+        i.fa.fa-file-pdf-o
+        span.xs-pl-10 Curriculum Vitae
+    div.col-xs-12.xs-pt-10.col-md-4.lg-pt-0
+      a(class="btn btn-social btn-linkedin" href="https://uk.linkedin.com/in/katarzyna-niedziela-a4895b5b/en")
         span.fa.fa-linkedin 
+        span Linkedin Profile

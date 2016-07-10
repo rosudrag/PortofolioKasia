@@ -11,6 +11,7 @@ app.use('/css', express.static(__dirname + '/node_modules/flexboxgrid/css')); //
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/css', express.static(__dirname + '/bower_components/less-space/dist'));
 app.use('/styles', express.static(__dirname + '/styles'));
+app.use('/CV', express.static(__dirname +'/CV'));
 app.set('port', (process.env.PORT || 5000));
 
 
