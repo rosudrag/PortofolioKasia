@@ -13,12 +13,17 @@ mixin top()
                   h1.h2
                     strong Katarzyna Niedziela
                 div.col-xs-12
-                  h2.h3 Writter at Home Sweet Home
+                  h2.h3 Looking for new opportunities
                 div.col-xs-12.center-xs
                   div.row.center-xs
                     +contact-me
 
 mixin contact-me()
-  a(class="btn btn-success" href="mailto:ka.niedziel@gmail.com")
-    span.glyphicon.glyphicon-envelope
-    span.xs-pl-10 Contact Me
+  div.row.middle-xs
+    div.col-xs-6
+      a(class="btn btn-success" href="mailto:ka.niedziel@gmail.com")
+        span.glyphicon.glyphicon-envelope
+        span.xs-pl-10 Contact Me
+    div.col-xs-6
+      a(class="btn btn-social-icon btn-linkedin" href="https://uk.linkedin.com/in/katarzyna-niedziela-a4895b5b/en")
+        span.fa.fa-linkedin 
