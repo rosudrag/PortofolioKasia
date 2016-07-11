@@ -7,6 +7,10 @@ mixin content()
             +about_me()
           div.col-xs-12.col-md.4
             +work_experience()
+          div.col-xs-12.col-md-8
+            +about_me_music()
+          div.col-xs-12.col-md-4
+            +music_experience()
             
 
 mixin about_me()
@@ -19,3 +23,14 @@ mixin work_experience()
     h2.h4 Work Experience
     p 2015-2016 office
     p 2014-2015 lorem ipsum
+    
+mixin about_me_music()
+  +panel-default()
+    h2.h4 My Music
+    span TODO: article about my flute music
+    
+mixin music_experience()
+  +panel-default()
+    h2.h4 Music Experience
+    span 2016 - La Suerte salsa band
+    
