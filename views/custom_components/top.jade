@@ -8,26 +8,26 @@ mixin top()
               div.row.center-xs
                 +img-circle-responsive("/kasia-round-75.png","Circle image")
             div.col-xs-12.col-sm-6
-              div.row.center-xs.bottom-xs
+              div.row
                 div.col-xs-12
                   h1.h2
                     strong Katarzyna Niedziela
                 div.col-xs-12
-                  h2.h3 Looking for new opportunities
-                div.col-xs-12
-                  +contact-me
+                  div.row
+                    div.col-xs-12
+                      h2.h3 Looking for new opportunities
+                    div.col-xs-12
+                      +contact-me
 
 mixin contact-me()
   div.row
-    div.col-xs-6.col-md-4
+    div.col-xs-12
       a(class="btn btn-success" href="mailto:ka.niedziel@gmail.com")
         i.glyphicon.glyphicon-envelope
         span.xs-pl-10 Contact Me
-    div.col-xs-6.xs-pr-30.col-md-4
-      a(class="btn btn-cv" href="/CV/cv.pdf")
+      a(class="btn btn-success" href="/CV/cv.pdf")
         i.fa.fa-file-pdf-o
         span.xs-pl-10 Curriculum Vitae
-    div.col-xs-12.xs-pt-10.col-md-4.lg-pt-0
-      a(class="btn btn-social btn-linkedin" href="https://uk.linkedin.com/in/katarzyna-niedziela-a4895b5b/en")
-        span.fa.fa-linkedin 
-        span Linkedin Profile
+      a(class="btn btn-success" href="https://uk.linkedin.com/in/katarzyna-niedziela-a4895b5b/en")
+        i.fa.fa-linkedin 
+        span.xs-pl-10 Linkedin Profile

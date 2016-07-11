@@ -3,5 +3,19 @@ mixin content()
     div.col-xs-12.col-lg-8
       div.flex-container
         div.row.between-xs.top-xs.xs-mt-10.start-xs
-          div.col-xs-12
+          div.col-xs-12.col-md-8
             +about_me()
+          div.col-xs-12.col-md.4
+            +work_experience()
+            
+
+mixin about_me()
+  +panel-default()
+    h2.h4 About Me
+    span I am an openminded history and journalism graduate with the soul of an artist. I play flute and love music; I enjoy drawing, painting and I am interested in visual arts and design. Whilst living in Poland I’ve worked in a newspaper writing articles. I enjoyed writing since I remember and I hope that one day I will write a book. I am always looking towards improving myself and consider myself an ambitious and hardworking person, agile and quick to pick up new skills. 
+            
+mixin work_experience()
+  +panel-default()
+    h2.h4 Work Experience
+    p 2015-2016 office
+    p 2014-2015 lorem ipsum
