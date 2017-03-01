@@ -47,6 +47,24 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       },
     }, {
+      path: '/portfolio',
+      name: 'portfolioHomePage',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/PortfolioHomePage/reducer'),
+          import('containers/PortfolioHomePage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, component]) => {
+          injectReducer('portfolioHomePage', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
