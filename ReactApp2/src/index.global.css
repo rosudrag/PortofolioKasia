@@ -57,7 +57,8 @@ body {
 }
 
 .phenomic-HeadingAnchor {
-  display: inline-block;
+  /*display: inline-block;*/
+  display: none;
   text-align: center;
   margin-left: calc(-1 * (var(--phenomic-HeadingAnchor-width) + var(--phenomic-HeadingAnchor-margin)));
   margin-right: var(--phenomic-HeadingAnchor-margin);

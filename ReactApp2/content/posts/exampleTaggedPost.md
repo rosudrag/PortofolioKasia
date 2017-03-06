@@ -5,6 +5,4 @@ layout: Post
 tags: music
 ---
 
-This is the first post!
-
-Kasia is the best
+# Example of tagged post
