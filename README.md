@@ -1,12 +1,19 @@
-# PortofolioKasia
-Portfolio - cms controlled - for Kasia
+# [Phenomic](https://github.com/MoOx/phenomic) phenomic-theme-base
 
-Based on node express
-CSS Frameworks: flexboxgrid
-Jade-Bootstrap
+## Install dependencies
 
+```sh
+npm install
+```
 
-Resources
-http://rajasegar.github.io/JADE-Bootstrap/
-https://cdnjs.com
-https://github.com/lipis/bootstrap-social
+## Run development server
+
+```sh
+npm start
+```
+
+## Build for production
+
+```sh
+npm run build
+```
