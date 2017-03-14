@@ -7,7 +7,7 @@ const Footer = () => (
     {/* If you like Phenomic, this is a way to share the love ;) */}
     <p>
       <a href={"http://rosudrag.github.io/"} className={styles.phenomicReference}>
-        {"Create by "}
+        {"Created by "}
         <span className={styles.phenomicReferenceName}>
           {"DRR"}
         </span>
