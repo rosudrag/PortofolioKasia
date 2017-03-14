@@ -50,6 +50,17 @@ const Page = (
     { name: "description", content: head.description },
   ]
 
+  const renderSubTitle = () => {
+    if(head.subTitle !== null) {
+      return (
+        <h2 className={ styles.heading }>
+          {head.subTitle}
+        </h2>
+      );
+    }
+    return null;
+  }
+
   return (
     <div className={ styles.page }>
       <Helmet
@@ -65,7 +76,10 @@ const Page = (
         >
           <div className={ styles.header }>
             <div className={ styles.wrapper }>
-              <h1 className={ styles.heading }>{ head.title }</h1>
+              <h1 className={ styles.heading }>
+                { head.title }
+              </h1>
+              {renderSubTitle()}
               {
                 head.cta &&
                 <Link to={ head.cta.link }>
