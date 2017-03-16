@@ -9,4 +9,9 @@ hero: /assets/flute.jpeg
 
 # **About me**
 
-I'm Kasia
+I'm Kasia! A passionate musician with interests in many, many different areas:
+* I play flute for as long as I've know myself
+* I dance a lot! Salsa, bachata, kizomba ...
+* I am part of La Suerte Salsa Band
+* I enjoy photography and painting
+* I have lately dipped my hands into graphic design: video production and image editing.
