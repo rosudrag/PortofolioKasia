@@ -17,7 +17,7 @@ const PageContainer = (props) => (
       PageError,
       Homepage,
       Post,
-      TaggedBlogPage,
+      TaggedBlogPage
     }}
   />
 )

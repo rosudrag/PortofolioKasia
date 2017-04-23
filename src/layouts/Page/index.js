@@ -63,10 +63,7 @@ const Page = (
 
   return (
     <div className={ styles.page }>
-      <Helmet
-        title={ metaTitle }
-        meta={ meta }
-      />
+      <Helmet title={ metaTitle } meta={ meta } />
       {
         <div
           className={ styles.hero }
@@ -98,7 +95,9 @@ const Page = (
           {
             isLoading
             ? <Loading />
-            : <BodyContainer>{ body }</BodyContainer>
+            : <BodyContainer>
+                { body }
+              </BodyContainer>
           }
         </div>
         { children }

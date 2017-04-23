@@ -9,9 +9,15 @@ hero: /assets/flute.jpeg
 
 # **About me**
 
-I'm Kasia! A passionate musician with interests in many, many different areas:
-* I play flute for as long as I've know myself
-* I dance a lot! Salsa, bachata, kizomba ...
-* I am part of La Suerte Salsa Band
-* I enjoy photography and painting
-* I have lately dipped my hands into graphic design: video production and image editing.
+Friends call me Kasia. I'm a passionate musician with many interests:
+* I play flute for over 10 years.
+* I am flutist in the La Suerte Salsa Band.
+* I dance a lot.
+* I enjoy photography and painting.
+* In my spare time I am learning about video production and image editing.
+
+# **Flutist for hire**
+
+I am currently available for hire for playing flute at all kinds of events in the vicinity of **Manchester, UK**.
+
+Also available to accompany me is Jacek Serafin, professional pianist.
