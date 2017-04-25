@@ -20,4 +20,4 @@ Friends call me Kasia. I'm a passionate musician with many interests:
 
 I am currently available for hire for playing flute at all kinds of events in the vicinity of **Manchester, UK**.
 
-Also available to accompany me is Jacek Serafin, professional pianist.
+A professional pianist is also available to accompany me.
