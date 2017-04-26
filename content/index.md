@@ -1,6 +1,6 @@
 ---
 title: Katarzyna Niedziela
-subTitle: Musician
+subTitle: Musician for hire - niedziela.kat@gmail.com
 layout: Homepage
 hero: /assets/flute.jpeg
 # hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
@@ -21,3 +21,6 @@ Friends call me Kasia. I'm a passionate musician with many interests:
 I am currently available for hire for playing flute at all kinds of events in the vicinity of **Manchester, UK**.
 
 A professional pianist is also available to accompany me.
+
+For booking or more information contact me by email **<niedziela.kat@gmail.com>**
+
