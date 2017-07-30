@@ -9,12 +9,7 @@ hero: /assets/flute.jpeg
 
 # **About me**
 
-Friends call me Kasia. I'm a passionate musician with many interests:
-* I play flute for over 10 years.
-* I am flutist in the La Suerte Salsa Band.
-* I dance a lot.
-* I enjoy photography and painting.
-* In my spare time I am learning about video production and image editing.
+Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.
 
 # **Flutist for hire**
 
