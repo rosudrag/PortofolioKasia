@@ -16,7 +16,7 @@ const LatestPosts = (props, { collection }) => {
   .slice(0, props.numberOfPosts || defaultNumberOfPosts);
 
     return (
-    <div className="col-xs-12">
+    <div className={'col-xs-12 ' + styles.latestPostsContainer}>
       <h2 className={ styles.latestPosts }>
         { 'Latest Posts' }
       </h2>
