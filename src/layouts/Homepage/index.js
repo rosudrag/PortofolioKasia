@@ -1,16 +1,16 @@
-import React from "react"
+import React from 'react';
 
-import LatestPosts from "../../components/LatestPosts"
-import Charges from "../../components/Portfolio/ChargeTable"
-import Page from "../Page"
+import LatestPosts from '../../components/LatestPosts';
+import Charges from '../../components/Portfolio/ChargeTable';
+import Page from '../Page';
 
 const Homepage = (props) => {
-  return (
+    return (
     <Page { ...props }>
       <Charges/>
       <LatestPosts />
     </Page>
-  )
-}
+    );
+};
 
-export default Homepage
+export default Homepage;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./index.css"
+import styles from './index.css';
 
 const Charges = () => {
 
@@ -19,7 +19,7 @@ const Charges = () => {
                     <td className={styles.alignCenter}>{individual}</td>
                     <td className={styles.alignCenter}>{couple}</td>
                 </tr>
-        )
+        );
     };
     return (
         <div>
@@ -27,13 +27,13 @@ const Charges = () => {
 
             <table className={styles.chargeTable}>
                 {chargeHead()}
-                {chargeRow("1 hour", "75 £/h", "130 £/h")}
-                {chargeRow("2 hours", "70 £/h",  "120 £/h")}
-                {chargeRow("3 hours", "65 £/h",  "110 £/h")}
-                {chargeRow("4 hours",  "55 £/h",  "100 £/h")}
+                {chargeRow('1 hour', '75 £/h', '130 £/h')}
+                {chargeRow('2 hours', '70 £/h', '120 £/h')}
+                {chargeRow('3 hours', '65 £/h', '110 £/h')}
+                {chargeRow('4 hours', '55 £/h', '100 £/h')}
             </table>
         </div>
-    )
-}
+    );
+};
 
 export default Charges;

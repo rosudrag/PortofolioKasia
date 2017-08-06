@@ -1,36 +1,20 @@
 import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import warning from 'warning';
-import { BodyContainer, joinUri } from 'phenomic';
+import { joinUri } from 'phenomic';
 
-import Loading from '../../components/Loading';
-import Header from '../../components/Header';
-import Banner from './Banner';
+import Navigation from '../../components/Navigation';
+import Banner from '../../components/Banner';
+import MainBody from '../../components/MainBody';
+import asMainComponent from '../../common/asMainComponent';
 
 import styles from './index.css';
 
-const Page = (props, metadata) => {
-    const {
-    isLoading,
-    __filename,
-    __url,
-    head,
-    body,
-    header,
-    footer,
-    children
-  } = props;
-    const { metadata: { pkg } } = metadata;
-
-    warning(
-    typeof head.title === 'string',
-    `Your page '${ __filename }' needs a title`);
-
-    const metaTitle = head.metaTitle ? head.metaTitle : head.title;
-
+const constructMeta = (props) => {
+    const { head, __url, pkg } = props;
     const socialImage = head.hero && head.hero.match('://') ? head.hero : joinUri(process.env.PHENOMIC_USER_URL, head.hero);
-
-    const meta = [
+    const metaTitle = head.metaTitle ? head.metaTitle : head.title;
+    return [
     { property: 'og:type', content: 'article' },
     { property: 'og:title', content: metaTitle },
         {
@@ -46,24 +30,40 @@ const Page = (props, metadata) => {
     { name: 'twitter:image', content: socialImage },
     { name: 'description', content: head.description }
     ];
+};
 
-    const content = isLoading ? <Loading />
-            : <BodyContainer>
-                { body }
-              </BodyContainer>;
+const BodyContainer = (props) => {
+    const { header, isLoading, body, footer, children } = props;
+    return (
+        <div className={ styles.wrapper + ' ' + styles.pageContent }>
+            <Navigation/>
+            { header }
+            <MainBody isLoading={isLoading} body={body}/>
+            { children }
+            { footer }
+        </div>
+    );
+};
+
+const BodyContainerComponent = asMainComponent(BodyContainer);
+
+const Page = (props, metadata) => {
+    const { __filename, __url, head } = props;
+    const { metadata: { pkg } } = metadata;
+
+    warning(
+    typeof head.title === 'string',
+    `Your page '${ __filename }' needs a title`);
+
+    const metaTitle = head.metaTitle ? head.metaTitle : head.title;
+
+    const meta = constructMeta({ head, __url, pkg });
+
     return (
     <div className={ styles.page }>
       <Helmet title={ metaTitle } meta={ meta } />
       <Banner head={head}/>
-      <div className={ styles.wrapper + ' ' + styles.pageContent }>
-        <Header/>
-        { header }
-        <div className={ styles.body }>
-          {content}
-        </div>
-        { children }
-        { footer }
-      </div>
+      <BodyContainerComponent {...props}/>
     </div>
     );
 };
