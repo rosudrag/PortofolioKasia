@@ -16,7 +16,7 @@ const TaggedPosts = (props, { collection }) => {
   .slice(0, props.numberOfPosts || defaultNumberOfPosts);
 
     return (
-    <div>
+    <div className={'col-xs-12 ' + styles.taggedPostsContainer}>
       <h2 className={ styles.latestPosts }>
         { props.title + ' Posts' }
       </h2>

@@ -10,7 +10,7 @@ const MainBody = (props) => {
             { body }
             </BodyContainer>;
     return (
-        <div>
+        <div className="col-xs-12" style={{ padding: '0px' }}>
           {content}
         </div>
     );

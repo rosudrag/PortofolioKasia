@@ -7,13 +7,11 @@ hero: /assets/logo.svg
 # hero credit: https://www.flickr.com/photos/pslee999/15589950511/
 ---
 
-# <center>Musician for hire - niedziela.kat@gmail.com</center>
-
 # **About me**
 
 Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.
 
-# **Flautist for hire**
+## **Flautist for hire**
 
 I am currently available for hire for playing flute at all kinds of events in the vicinity of **Manchester, UK**.
 

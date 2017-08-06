@@ -8,7 +8,7 @@ const asMainComponent = (Component, customStyles) => (props) =>{
     }
     return (
     <div className={mainDivClass }>
-      <div className={'col-xs-8 ' + styles.componentContainer}>
+      <div className={'col-xs-10 col-md-8 ' + styles.componentContainer}>
 	    <Component { ...props }/>
       </div>
   </div>);

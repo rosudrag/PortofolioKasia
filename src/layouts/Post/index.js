@@ -11,10 +11,7 @@ const Post = (props) => {
     const tags = props.head.tags ? props.head.tags : defaultTags;
 
     return (
-    <Page { ...props } header={
-        <PostHeader pageDate={pageDate} tags={tags}/>
-      }
-      >
+    <Page { ...props } header={<PostHeader pageDate={pageDate} tags={tags}/>}>
       <hr />
       <LatestPosts />
     </Page>

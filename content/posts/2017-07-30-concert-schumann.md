@@ -6,6 +6,12 @@ tags: music
 hero: /assets/logo.jpg
 ---
 
-# Flute concert
+# <center>Flute concert</center>
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Hbptvx-atsY" frameborder="0" allowfullscreen></iframe>
+<center>
+    <div class="videoWrapper">
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/Hbptvx-atsY" frameborder="0" allowfullscreen>
+        </iframe>        
+    </div>
+</center>
+
