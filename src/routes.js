@@ -9,14 +9,8 @@ import Homepage from './layouts/Homepage';
 import TaggedBlogPage from './layouts/TaggedBlogPage';
 import Post from './layouts/Post';
 import Scripts from './scripts';
+import logPageView from './log-google-analytics';
 
-var ReactGA = require('react-ga');
-ReactGA.initialize('UA-77562801-1');
-
-function logPageView() {
-    ReactGA.set({ page: window.location.pathname + window.location.search });
-    ReactGA.pageview(window.location.pathname + window.location.search);
-}
 
 const PageContainer = (props) => (
   <div>
