@@ -30,11 +30,7 @@
   padding: 5rem 0;
   padding: 10vh 0;
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    var(--colorPrimaryDark),
-    color(var(--colorPrimary) a(0.2))
-  );
+  background-color: rgba(43, 191, 169, 0.20)
 }
 
 .heading {

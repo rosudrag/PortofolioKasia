@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
-import { Flex, Box } from 'reflexbox'
-import styles from "./index.css"
+import React, { PropTypes } from 'react';
+import { Flex, Box } from 'reflexbox';
+import styles from './index.css';
 
 
 const PostHeader = (props) => {
@@ -24,12 +24,12 @@ const PostHeader = (props) => {
 
             </header>
         </div>
-    )
-}
+    );
+};
 
 PostHeader.propTypes = {
-  pageDate: PropTypes.object.isRequired,
-  tags: PropTypes.string.isRequired
-}
+    pageDate: PropTypes.object.isRequired,
+    tags: PropTypes.string.isRequired
+};
 
 export default PostHeader;

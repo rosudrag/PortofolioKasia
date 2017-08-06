@@ -1,11 +1,14 @@
 ---
-title: Katarzyna Niedziela
-subTitle: Musician for hire - niedziela.kat@gmail.com
+title: Katarzyna Niedziela Portfolio
 layout: Homepage
-hero: /assets/flute.jpeg
+hero: /assets/logo.svg
+# hero: /assets/flute.jpeg
 # hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
 # hero credit: https://www.flickr.com/photos/pslee999/15589950511/
 ---
+
+# Katarzyna Niedziela
+Musician for hire - niedziela.kat@gmail.com
 
 # **About me**
 

@@ -3,6 +3,7 @@ title: Concert Schumann
 date: 2017-07-30
 layout: Post
 tags: music
+hero: /assets/logo.jpg
 ---
 
 # Flute concert
