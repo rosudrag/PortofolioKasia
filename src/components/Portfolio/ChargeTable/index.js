@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './index.css';
+import Well from 'react-bootstrap';
 
 const Charges = () => {
 
@@ -22,9 +23,9 @@ const Charges = () => {
         );
     };
     return (
-        <div className="col-xs-12" style={{ paddingRight: '0px', paddingLeft: '0px' }}>
-            <div className={styles.chargeTableContainer}>
-                <h2>Charges</h2>
+        <div className="col-xs-12" style={{ paddingRight: '0px', paddingLeft: '0px', paddingTop: '56px', paddingBottom: '32px' }}>
+            <div className={'col-xs-6 ' + styles.chargeTableContainer} style={{ border: '1px solid rgba(0, 35, 255, 0.3)' }}>
+                <h2 style={{ marginTop: '8px' }}>Charges</h2>
 
                 <table className={styles.chargeTable}>
                     {chargeHead()}

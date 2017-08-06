@@ -22,6 +22,10 @@ body {
   padding: 0;
 }
 
+p {
+  font-size: 1.7rem;
+}
+
 /*
  * page styles
  */
@@ -31,12 +35,17 @@ html {
 }
 
 body {
-  color: var(--colorText);
+  color: var(--colorText)!important;
   font-size: 1rem;
   line-height: 1.5rem;
 
   /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important;
+}
+
+td,
+th{
+  font-size: 1.7rem;
 }
 
 /*
