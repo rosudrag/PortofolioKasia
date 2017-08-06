@@ -12,9 +12,8 @@
 }
 
 .hero {
-  /* fallback, mainly visible when hero image is loading */
+  background-image: '../../../content/assets/logo.svg';
   background-color: var(--colorSecondary);
-  /* fallback when there is no hero image */
   background:
     radial-gradient(
       ellipse at 50% 50%,

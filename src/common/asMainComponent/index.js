@@ -1,11 +1,18 @@
 import React from 'react';
-// import styles from './index.css';
+import styles from './index.css';
 
-const asMainComponent = (Component) => (props) =>
-    <div className='row center-xs'>
-      <div className='col-xs-8 box-red'>
+const asMainComponent = (Component, customStyles) => (props) =>{
+    let mainDivClass = 'row center-xs';
+    if (typeof (customStyles) !== 'undefined' && customStyles !== null){
+        mainDivClass = mainDivClass + ' ' + customStyles;
+    }
+    return (
+    <div className={mainDivClass }>
+      <div className={'col-xs-8 ' + styles.componentContainer}>
 	    <Component { ...props }/>
       </div>
-    </div>;
+  </div>);
+};
+
 
 export default asMainComponent;

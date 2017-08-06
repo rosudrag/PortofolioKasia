@@ -35,8 +35,7 @@ const constructMeta = (props) => {
 const BodyContainer = (props) => {
     const { header, isLoading, body, footer, children } = props;
     return (
-        <div className={ styles.wrapper + ' ' + styles.pageContent }>
-            <Navigation/>
+        <div className={ 'row start-xs ' + styles.wrapper + ' ' + styles.pageContent }>
             { header }
             <MainBody isLoading={isLoading} body={body}/>
             { children }
@@ -63,6 +62,7 @@ const Page = (props, metadata) => {
     <div className={ styles.page }>
       <Helmet title={ metaTitle } meta={ meta } />
       <Banner head={head}/>
+      <Navigation/>
       <BodyContainerComponent {...props}/>
     </div>
     );

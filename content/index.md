@@ -7,8 +7,7 @@ hero: /assets/logo.svg
 # hero credit: https://www.flickr.com/photos/pslee999/15589950511/
 ---
 
-# Katarzyna Niedziela
-Musician for hire - niedziela.kat@gmail.com
+# <center>Musician for hire - niedziela.kat@gmail.com</center>
 
 # **About me**
 
