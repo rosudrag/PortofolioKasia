@@ -1,43 +1,13 @@
 import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import warning from 'warning';
-import { BodyContainer, joinUri, Link } from 'phenomic';
+import { BodyContainer, joinUri } from 'phenomic';
 
-import Button from '../../components/Button';
 import Loading from '../../components/Loading';
 import Header from '../../components/Header';
+import Banner from './Banner';
 
 import styles from './index.css';
-
-const Hero = (props) => {
-    const { head } = props;
-
-    const heroStyle = {
-        backgroundImage: `url(${ head.hero })`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: '50% 50%'
-    };
-    return (
-    <div
-      className={ styles.hero }
-      style={ head.hero && heroStyle }>
-      <div className={ styles.header }>
-        <div className={ styles.wrapper }>
-          {
-            head.cta &&
-            <Link to={ head.cta.link }>
-              <Button className={ styles.cta } light { ...head.cta.props }>
-                { head.cta.label }
-              </Button>
-            </Link>
-          }
-        </div>
-      </div>
-    </div>
-    );
-};
-
 
 const Page = (props, metadata) => {
     const {
@@ -84,7 +54,7 @@ const Page = (props, metadata) => {
     return (
     <div className={ styles.page }>
       <Helmet title={ metaTitle } meta={ meta } />
-      <Hero head={head}/>
+      <Banner head={head}/>
       <div className={ styles.wrapper + ' ' + styles.pageContent }>
         <Header/>
         { header }
