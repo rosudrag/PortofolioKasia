@@ -1,12 +1,10 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'phenomic';
-import Svg from 'react-svg-inline';
-
-import twitterSvg from '../icons/iconmonstr-twitter-1.svg';
-import gitHubSvg from '../icons/iconmonstr-github-1.svg';
 import asMainComponent from '../../common/asMainComponent';
 
 import styles from './index.css';
+
+const CVLink = () => <a className={ styles.link } target="_blank" href = {'/assets/CV/cv.pdf'}>CV</a>;
 
 const Navigation = (props, { metadata: { pkg } }) => (
   <div className={'row start-xs ' + styles.navContainer}>
@@ -19,29 +17,7 @@ const Navigation = (props, { metadata: { pkg } }) => (
           <Link className={ styles.link } to={ '/music' }>
             { 'Music' }
           </Link>
-          <a className={ styles.link } target="_blank" href = {'/assets/CV/cv.pdf'}>CV</a>
-        </div>
-        <div className={ styles.navPart2 }>
-          {
-            pkg.twitter &&
-            <a
-              href={ `https://twitter.com/${pkg.twitter}` }
-              className={ styles.link }
-            >
-              <Svg svg={ twitterSvg } cleanup />
-              { 'Twitter' }
-            </a>
-          }
-          {
-            pkg.repository &&
-            <a
-              href={ pkg.repository }
-              className={ styles.link }
-            >
-              <Svg svg={ gitHubSvg } cleanup />
-              { 'GitHub' }
-            </a>
-          }
+          <CVLink/>
         </div>
       </nav>
     </header>

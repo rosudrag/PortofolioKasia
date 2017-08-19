@@ -25,9 +25,7 @@ const PageContainer = (props) => (
         }}
       />
       <Scripts/>
-
   </div>
-
 );
 
 export default (
