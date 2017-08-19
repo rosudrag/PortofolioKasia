@@ -7,7 +7,7 @@ const Charges = () => {
         return (
                 <thead>
                     <tr>
-                        <th>Hours</th>
+                        <th># Hours</th>
                         <th>Flute Hourly Rate</th>
                         <th>Flute and piano hourly rate</th>
                     </tr>
