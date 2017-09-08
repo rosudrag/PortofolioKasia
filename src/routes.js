@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router';
+import { Route } from 'react-router';
 import { PageContainer as PhenomicPageContainer } from 'phenomic';
 
 import AppContainer from './AppContainer';
@@ -30,8 +30,6 @@ const PageContainer = (props) => (
 
 export default (
   <div>
-    <Redirect from="/admin" to="/assets/admin/" />
-    
     <Route component={ AppContainer }>
       <Route path="*" component={ PageContainer } onEnter={logPageView}/>
     </Route>
