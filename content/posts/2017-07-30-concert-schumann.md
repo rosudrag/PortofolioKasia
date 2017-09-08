@@ -7,6 +7,8 @@ tags: music
 ---
 # <center>The music poetry of Robert Schumann- concert</center>
 
+<br><br>
+
 On 22'nd July 2017 I had the pleasure to take part in a beautiful concert 'The Music Poetry of Robert Schumann'. The event was held by Dean Row Unitarian Chapel in Wilmslow.
 
 Specially for the ocasion, I prepared Three Romances op. 94 of Robert Schumann's. It consists of 3 short pieces in A-B-A form and was oryginally written by the composer for oboe, later transcribed for flute by famous flautist Jean-Pierre Rampal.
@@ -15,7 +17,11 @@ It was speculated that the piece was written during one of Schumanns manic episo
 
 Below a video of the performance, hope you will enjoy it!
 
+<br>
+
 Kat.
+
+<br><br>
 
 <center>
 <div class="videoWrapper">
