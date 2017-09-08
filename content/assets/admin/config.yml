@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: rosudrag/rosudrag.github.io # Path to your Github repository
+  repo: rosudrag/PortofolioKasia # Path to your Github repository
   branch: master # Branch to update
 
 public_folder: "content"
