@@ -5,7 +5,7 @@ date: 2017-07-30T00:00:00.000Z
 hero: /assets/logo.jpg
 tags: music
 ---
-# <center>The music poetry of Robert Schumann- concert</center>
+# <center>The music poetry of Robert Schumann</center>
 
 <br><br>
 
@@ -29,4 +29,3 @@ Kat.
 </iframe>\
 </div>
 </center>
-
