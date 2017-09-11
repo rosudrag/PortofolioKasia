@@ -6,7 +6,7 @@ import styles from './index.css';
 
 const Banner = (props) => {
     return (
-      <div style={{ marginTop: '16px' }} className="row left-xs">
+      <div style={{ marginTop: '16px' }} className="row center-xs">
         <Image style={{ height: '120px', padding: '16px', width: '352px' }} src="/assets/logo.svg" responsive />
       </div>
     );
