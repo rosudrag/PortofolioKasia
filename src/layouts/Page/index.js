@@ -7,6 +7,7 @@ import Navigation from '../../components/Navigation';
 import Banner from '../../components/Banner';
 import MainBody from '../../components/MainBody';
 import asMainComponent from '../../common/asMainComponent';
+import { Image } from 'react-bootstrap';
 
 import styles from './index.css';
 
@@ -37,6 +38,12 @@ const BodyContainer = (props) => {
     return (
         <div className={ 'row start-xs ' + styles.wrapper + ' ' + styles.pageContent }>
             { header }
+            {/* <div className="row center-xs">
+                <div className="col-xs-10 col-md-8" style={{ padding: '0px' }}>
+                    <Image src="/assets/background1.jpg" responsive rounded/>
+                </div>
+            </div> */}
+
             <MainBody isLoading={isLoading} body={body}/>
             { children }
             { footer }

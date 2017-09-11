@@ -9,7 +9,7 @@ hero: /assets/logo.svg
 
 # **About me**
 
-Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.
+_Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa._
 
 <br>
 
