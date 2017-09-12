@@ -23,5 +23,8 @@
   },
   "dependencies": {
     "typeface-roboto": "0.0.35"
+  },
+  "phenomic": {
+    "presets": ["@phenomic/preset-react-app"]
   }
 }
