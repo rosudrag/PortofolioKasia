@@ -1,9 +1,4 @@
 import Head from 'react-helmet';
-
-import './styles.css';
-
-// @flow weak
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
@@ -13,10 +8,12 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import './styles.css';
+
 
 const styles = theme => ({
   root: {
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 0,
     width: '100%',
   },
   flex: {
@@ -38,7 +35,7 @@ function ButtonAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Typography type="title" color="inherit" className={classes.flex}>
-            Title
+            Portfolio
           </Typography>
           <Button color="contrast">Login</Button>
         </Toolbar>
