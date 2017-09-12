@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Head from 'react-helmet';
 
-import BaseLayout from '../layouts/Base';
+import Page from '../layouts/Page';
 
 import {
   createContainer,
@@ -9,35 +9,48 @@ import {
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client';
 
-const HomeMeta = () => {
+const DefaultHomeMeta = () => {
     return (
     <Head>
-      <title>Katarzyna Niedziela Portfolio</title>
+      <title>Loading</title>
       <meta name="description" content="Katarzyna Niedziela Portfolio" />
     </Head>
     );
 };
 
 
-const HomeContent = () => {
+const HomeContent = (props) => {
+    const nodes = props.pages.node.list;
+    const homeNode = nodes.find(n => n.id === 'pages\\index');
+    const body = homeNode.body;
     return (
     <div>
-      content
+        <Head>
+            <title>{homeNode.title}</title>
+            <meta name="description" content={homeNode.title} />
+        </Head>
+        <BodyRenderer>{body}</BodyRenderer>
     </div>
     );
 };
 
 const Home = (props) => {
     const { isLoading } = props;
-    const content = isLoading ? 'Loading...' : <HomeContent />;
+    const notReady = isLoading || props.pages.node === null;
+    const content = notReady ? 'Loading...' : <HomeContent {...props}/>;
     return (
-	<BaseLayout>
-		<HomeMeta/>
+	<Page>
+		<DefaultHomeMeta/>
 		{content}
-	</BaseLayout>
+	</Page>
     );
 };
 
-const HomeContainer = createContainer(Home);
+const HomeContainer = createContainer(Home, props => {
+    return {
+        pages: query({ path: 'pages' })
+    };
+});
+
 
 export default HomeContainer;

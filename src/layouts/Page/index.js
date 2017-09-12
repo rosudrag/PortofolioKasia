@@ -37,7 +37,7 @@ function ButtonAppBar(props) {
           <Typography type="title" color="inherit" className={classes.flex}>
             Portfolio
           </Typography>
-          <Button color="contrast">Login</Button>
+          <Button color="contrast"><a href='/music'>Test</a></Button>
         </Toolbar>
       </AppBar>
     </div>
