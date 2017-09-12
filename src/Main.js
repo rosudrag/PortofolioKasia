@@ -5,9 +5,9 @@ import HomeContainer from './Home';
 
 const routes = () => (
     <Router history={browserHistory}>
-		<Route path="/" component={HomeContainer} />
-		<Route path="/after/:after" component={HomeContainer} />
-		<Route path="*" component={PageError} />
+			<Route path="/" component={HomeContainer} />
+			<Route path="/after/:after" component={HomeContainer} />
+			<Route path="*" component={PageError} />
     </Router>
 );
 

@@ -12,22 +12,22 @@ import './styles.css';
 
 
 const styles = theme => ({
-  root: {
-    marginTop: theme.spacing.unit * 0,
-    width: '100%',
-  },
-  flex: {
-    flex: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
+    root: {
+        marginTop: theme.spacing.unit * 0,
+        width: '100%'
+    },
+    flex: {
+        flex: 1
+    },
+    menuButton: {
+        marginLeft: -12,
+        marginRight: 20
+    }
 });
 
 function ButtonAppBar(props) {
-  const classes = props.classes;
-  return (
+    const classes = props.classes;
+    return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
@@ -41,11 +41,11 @@ function ButtonAppBar(props) {
         </Toolbar>
       </AppBar>
     </div>
-  );
+    );
 }
 
 ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
 };
 
 const TryMe = withStyles(styles)(ButtonAppBar);

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Head from 'react-helmet';
 
-import Layout from '../Layout';
+import BaseLayout from '../layouts/Base';
 
 import {
   createContainer,
@@ -10,32 +10,32 @@ import {
 } from '@phenomic/preset-react-app/lib/client';
 
 const HomeMeta = () => {
-	return (
+    return (
     <Head>
       <title>Katarzyna Niedziela Portfolio</title>
       <meta name="description" content="Katarzyna Niedziela Portfolio" />
     </Head>
-	);
+    );
 };
 
 
 const HomeContent = () => {
-	return (
+    return (
     <div>
       content
     </div>
-	);
+    );
 };
 
 const Home = (props) => {
-	const { isLoading } = props;
-	const content = isLoading ? 'Loading...' : <HomeContent />;
-	return (
-	<Layout>
+    const { isLoading } = props;
+    const content = isLoading ? 'Loading...' : <HomeContent />;
+    return (
+	<BaseLayout>
 		<HomeMeta/>
 		{content}
-	</Layout>
-	);
+	</BaseLayout>
+    );
 };
 
 const HomeContainer = createContainer(Home);
