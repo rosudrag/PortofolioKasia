@@ -4,7 +4,6 @@ import { createMuiTheme } from 'material-ui/styles';
 import NavBar from '../../NavBar';
 import { MuiThemeProvider } from 'material-ui/styles';
 import { red, blue, teal } from 'material-ui/colors';
-import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import { withStyles } from 'material-ui/styles';
 import './styles.css';
@@ -20,11 +19,6 @@ const theme = createMuiTheme({
 const styles = aTheme => ({
     root: {
         flexGrow: 1
-    },
-    paper: {
-        padding: 16,
-        textAlign: 'center',
-        color: aTheme.palette.text.secondary
     }
 });
 
@@ -43,10 +37,8 @@ const Layout = ({ children, classes }) => (
       </Head>
       <NavBar/>
       <div className={classes.root}>
-        <Grid container spacing={24}>
-          <Grid item xs={12}>
-            <div className={classes.paper}>{children}</div>
-          </Grid>
+        <Grid container spacing={8} justify='center'>
+          {children}
         </Grid>
       </div>
     </div>
