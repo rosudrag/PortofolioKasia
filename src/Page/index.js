@@ -1,17 +1,14 @@
 import * as React from 'react';
-import Head from 'react-helmet';
 
 import PageLayout from '../layouts/Page';
 
 import {
   createContainer,
-  query,
-  BodyRenderer
+  query
 } from '@phenomic/preset-react-app/lib/client';
 
 const Page = (props) => {
     const { isLoading } = props;
-    console.log(props);
     const content = isLoading ? 'Loading...' : 'page content';
     return (
 	<PageLayout>

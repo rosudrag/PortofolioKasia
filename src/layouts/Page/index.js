@@ -4,9 +4,6 @@ import { createMuiTheme } from 'material-ui/styles';
 import NavBar from '../../NavBar';
 import { MuiThemeProvider } from 'material-ui/styles';
 import { red, blue, teal } from 'material-ui/colors';
-import Grid from 'material-ui/Grid';
-import { withStyles } from 'material-ui/styles';
-import './styles.css';
 
 const theme = createMuiTheme({
     palette: {
@@ -16,33 +13,33 @@ const theme = createMuiTheme({
     }
 });
 
-const styles = aTheme => ({
-    root: {
-        flexGrow: 1
-    }
-});
 
 
-const Layout = ({ children, classes }) => (
+const Layout = ({ children }) => (
   <MuiThemeProvider theme={theme}>
-    <div className={classes.root}>
+    <div>
       <Head>
         <html lang="en" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" href="favicon.png"/>
       </Head>
       <NavBar/>
-      <div className={classes.root}>
-        <Grid container spacing={8} justify='center'>
-          {children}
-        </Grid>
-      </div>
+      <span className="background"></span>
+      {children}
+      
+      <footer>
+        <div className="row">
+          <div className="col-md-12">
+            <p>&copy; Copyright 2017 DRR</p>
+          </div>
+        </div>
+        </footer>
     </div>
+
   </MuiThemeProvider>
 );
 
-export default withStyles(styles)(Layout);
+export default Layout;

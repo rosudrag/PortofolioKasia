@@ -1,50 +1,61 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import IconButton from 'material-ui/IconButton';
-import MenuIcon from 'material-ui-icons/Menu';
+import './styles.css';
 
-const styles = theme => ({
-    root: {
-        marginTop: theme.spacing.unit * 0,
-        width: '100%'
-    },
-    flex: {
-        flex: 1
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20
-    },
-    appBar: {
-        backgroundColor: 'white'
-    }
-});
-
-function NavBar(props) {
-    const classes = props.classes;
+let Header = (props) => {
     return (
-    <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar}>
-        <Toolbar>
-          <IconButton className={classes.menuButton} color="primary" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography type="title" color="primary" className={classes.flex}>
-          <Button color="primary" href="/">Katarzyna Niedziela</Button>
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
+        <header className="header">
+            <div className="container">
+                <div className="row" role="banner">
+                    <div className="col-md-6">
+                        <div className="logo">
+                            <img className='logo' src="img/logo.png" alt="Logo" />
+                        </div>
+                    </div>
+                    <div className="col-md-6 header-contact-address">
+                        <a href="mailto:name@yourdomain.com">kat@fillme.com</a><br/>
+                        <a href="tel:+00123456789">+00 (123) 456 789</a>
+                    </div>
+                </div>
+            </div>
+        </header>
     );
-}
-
-NavBar.propTypes = {
-    classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(NavBar);
+const Navigation = (props) => {
+    return (
+        <div className="main-menu">
+            <div id="rex-sticky">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 menu-section">
+                            <div className="menu-button one-page">Menu</div>
+                            <nav>
+                                <ul id="navigation-menu" data-breakpoint="992" className="flexnav one-page">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#skills">Skills</a></li>
+                                    <li><a href="#experience">Experience</a></li>
+                                    <li><a href="#education">Education</a></li>
+                                    <li><a href="#work">Work</a></li>
+                                    <li><a href="#reference-link">Reference</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const NavBar = (props) => {
+    return (
+        <div>
+            <Header/>
+            <Navigation/>
+        </div>
+    );
+};
+
+export default NavBar;
