@@ -13,8 +13,6 @@ const theme = createMuiTheme({
     }
 });
 
-
-
 const Layout = ({ children }) => (
   <MuiThemeProvider theme={theme}>
     <div>
@@ -29,7 +27,6 @@ const Layout = ({ children }) => (
       <NavBar/>
       <span className="background"></span>
       {children}
-      
       <footer>
         <div className="row">
           <div className="col-md-12">

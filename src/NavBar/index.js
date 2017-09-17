@@ -8,7 +8,7 @@ let Header = (props) => {
                 <div className="row" role="banner">
                     <div className="col-md-6">
                         <div className="logo">
-                            <img className='logo' src="img/logo.png" alt="Logo" />
+                            <img className='personalLogo' src="img/logo.png" alt="Logo" />
                         </div>
                     </div>
                     <div className="col-md-6 header-contact-address">
@@ -34,10 +34,8 @@ const Navigation = (props) => {
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#skills">Skills</a></li>
-                                    <li><a href="#experience">Experience</a></li>
                                     <li><a href="#education">Education</a></li>
                                     <li><a href="#work">Work</a></li>
-                                    <li><a href="#reference-link">Reference</a></li>
                                     <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </nav>
