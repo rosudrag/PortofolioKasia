@@ -43,31 +43,32 @@ const getSectionNode = (props, nodeName) => {
 
 const MainSection = (props) => {
     const aboutNode = getSectionNode(props, 'about');
+    const postNodes = props.posts.node.list;
     return (
       <div className="col-md-12">
           <AboutSection node={aboutNode} />
           <br/>
           <br/>
-          {/* <SkillsSection/>
+          {/* <SkillsSection/> */}
+          {/* <br/> */}
+          {/* <br/> */}
+          {/* <EducationSection/> */}
+          {/* <br/> */}
+          {/* <br/> */}
+          {/* <WorkSection/> */}
+          {/* <br/> */}
+          {/* <br/> */}
+          <BlogSection posts={postNodes}/>
           <br/>
-          <br/> */}
-          {/* <EducationSection/>
           <br/>
-          <br/>
-          <WorkSection/>
-          <br/>
-          <br/>
-          <BlogSection/>
-          <br/>
-          <br/>
-          <ContactForm/> */}
+          {/* <ContactForm/> */}
       </div>
     );
 };
 
 const Home = (props) => {
     const { isLoading } = props;
-    const notReady = isLoading || props.pages.node === null;
+    const notReady = isLoading || props.pages.node === null || props.posts.node === null || props.sections.node === null;
     const content = notReady ? 'Loading...' : <HomeContent {...props}/>;
     return (
       <Page>
@@ -83,7 +84,8 @@ const Home = (props) => {
 const HomeContainer = createContainer(Home, props => {
     return {
         pages: query({ path: 'pages' }),
-        sections: query({ path: 'homeSections' })
+        sections: query({ path: 'homeSections' }),
+        posts: query({ path: 'posts' })
     };
 });
 

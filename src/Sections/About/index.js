@@ -2,7 +2,6 @@ import React from 'react';
 import { BodyRenderer } from '@phenomic/preset-react-app/lib/client';
 
 const AboutSection = (props) => {
-    console.log(props);
     return (
         <div>
             <BodyRenderer>{props.node.body}</BodyRenderer>

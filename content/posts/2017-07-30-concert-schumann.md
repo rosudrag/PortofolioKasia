@@ -3,7 +3,7 @@ layout: Post
 title: Concert Schumann
 date: 2017-07-30T00:00:00.000Z
 hero: /assets/logo.jpg
-tags: music
+description: description1
 ---
 # <center>The music poetry of Robert Schumann</center>
 
