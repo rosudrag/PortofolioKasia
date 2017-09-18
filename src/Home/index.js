@@ -11,46 +11,57 @@ import Page from '../layouts/Page';
 
 import {
   createContainer,
-  query,
-  BodyRenderer
+  query
 } from '@phenomic/preset-react-app/lib/client';
 
 let HomeContent = (props) => {
     const nodes = props.pages.node.list;
     const homeNode = nodes.find(n => n.id === 'pages\\index');
-    const body = homeNode.body;
     return (
       <div>
         <Head>
             <title>{homeNode.title}</title>
             <meta name="description" content={homeNode.title} />
         </Head>
-        <BodyRenderer>{body}</BodyRenderer>
+        <section className="main">
+          <div className="container">
+              <div className="row">
+                <MainSection {...props}/>
+              </div>
+          </div>
+        </section>
       </div>
 
     );
 };
 
+const getSectionNode = (props, nodeName) => {
+    const nodes = props.sections.node.list;
+    const node = nodes.find(n => n.id === 'homeSections\\' + nodeName);
+    return node;
+};
+
 const MainSection = (props) => {
+    const aboutNode = getSectionNode(props, 'about');
     return (
-        <div className="col-md-12">
-            <AboutSection/>
-            <br/>
-            <br/>
-            <SkillsSection/>
-            <br/>
-            <br/>
-            <EducationSection/>
-            <br/>
-            <br/>
-            <WorkSection/>
-            <br/>
-            <br/>
-            <BlogSection/>
-            <br/>
-            <br/>
-            <ContactForm/>
-        </div>
+      <div className="col-md-12">
+          <AboutSection node={aboutNode} />
+          <br/>
+          <br/>
+          {/* <SkillsSection/>
+          <br/>
+          <br/> */}
+          {/* <EducationSection/>
+          <br/>
+          <br/>
+          <WorkSection/>
+          <br/>
+          <br/>
+          <BlogSection/>
+          <br/>
+          <br/>
+          <ContactForm/> */}
+      </div>
     );
 };
 
@@ -59,26 +70,20 @@ const Home = (props) => {
     const notReady = isLoading || props.pages.node === null;
     const content = notReady ? 'Loading...' : <HomeContent {...props}/>;
     return (
-	<Page>
-    <Head>
-      <title>Loading</title>
-      <meta name="description" content="Katarzyna Niedziela Portfolio" />
-    </Head>
-    <section className="main">
-      <div className="container">
-          <div className="row">
-            <MainSection/>
-          </div>
-      </div>
-    </section>
-    {content}
-	</Page>
+      <Page>
+        <Head>
+          <title>Loading</title>
+          <meta name="description" content="Katarzyna Niedziela Portfolio" />
+        </Head>
+        {content}
+      </Page>
     );
 };
 
 const HomeContainer = createContainer(Home, props => {
     return {
-        pages: query({ path: 'pages' })
+        pages: query({ path: 'pages' }),
+        sections: query({ path: 'homeSections' })
     };
 });
 

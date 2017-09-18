@@ -7,13 +7,16 @@ let Header = (props) => {
             <div className="container">
                 <div className="row" role="banner">
                     <div className="col-md-6">
-                        <div className="logo">
+                        {/* <div className="logo">
                             <img className='personalLogo' src="img/logo.png" alt="Logo" />
+                        </div> */}
+                        <div className="logoPlaceholder">
+                            Katarzyna Niedziela
                         </div>
                     </div>
                     <div className="col-md-6 header-contact-address">
-                        <a href="mailto:name@yourdomain.com">kat@fillme.com</a><br/>
-                        <a href="tel:+00123456789">+00 (123) 456 789</a>
+                        <a href="mailto:name@yourdomain.com">niedziela.kat@gmail.com</a><br/>
+                        {/* <a href="tel:+00123456789">+00 (123) 456 789</a> */}
                     </div>
                 </div>
             </div>
