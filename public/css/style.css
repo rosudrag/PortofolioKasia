@@ -6764,15 +6764,16 @@ footer {
 /* About section style
 	-------------------------*/
 .hero {
-  background: url("http://placehold.it/1140x518");
-  background: url("http://placehold.it/1140x518");
+  /* background: url("http://placehold.it/1140x518"); */
+  background: url("/img/panel2.png");
   background-color: #4dbfd9;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 0.2em; }
   .hero .hero-logo img {
-    height: auto;
+    height: 152px;
+    width: 152px;
     margin-bottom: 1em; }
   .hero .hero-btn > a {
     margin: 10px auto; }

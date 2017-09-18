@@ -1,6 +1,39 @@
 import React from 'react';
 import { BodyRenderer } from '@phenomic/preset-react-app/lib/client';
 
+import Avatar from 'material-ui/Avatar';
+import classNames from 'classnames';
+import { withStyles } from 'material-ui/styles';
+
+const styles = {
+    row: {
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    avatar: {
+        margin: 10
+    },
+    bigAvatar: {
+        width: 152,
+        height: 152
+    }
+};
+
+function ImageAvatars(props) {
+    const classes = props.classes;
+    return (
+      <div className={classes.row}>
+        <Avatar
+          alt="Logo Image"
+          src="/img/profile-img.jpg"
+          className={classNames(classes.avatar, classes.bigAvatar)}
+        />
+      </div>
+    );
+}
+
+const MyAvatar = withStyles(styles)(ImageAvatars);
+
 const AboutSection = (props) => {
     return (
         <div>
@@ -8,7 +41,9 @@ const AboutSection = (props) => {
             <div className="about">
                 <div className="hero">
                     <div className="hero-inner">
-                        <a href="" className="hero-logo"><img src="http://placehold.it/152x152" alt="Logo Image"/></a>
+                        {/* <a href="" className="hero-logo"><img src="http://placehold.it/152x152" alt="Logo Image"/></a> */}
+                        <a href="#" ><MyAvatar /></a>
+
                         <div className="hero-copy">
                         <h1><span>I’m</span> Katarzyna Niedziela</h1>
                         <h6>Musician, Writer, Photographer, Blogger</h6>
@@ -33,6 +68,7 @@ const AboutSection = (props) => {
                             <h4>About</h4>
                             <div className="about-content">
                                 <span className="active-color">Hello, I am Katarzyna Niedziela, Musician, Writer, Photographer and Blogger</span>
+                                <br/><br/>
                                 <p>Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.</p>
                                 <span className="border-dashed"></span>
                                 {/* <img src="img/signature.png" alt=""/> */}
@@ -41,14 +77,15 @@ const AboutSection = (props) => {
                         <div className="col-md-5 col-md-offset-1">
                             <h4>
                                 Flautist for hire
-                                
+
                             </h4>
                             <div className="about-content">
                                 I am currently available for hire for playing flute at all kinds of events in the vicinity of Manchester, UK.
-
+                                <br/><br/>
                                 A professional pianist is also available to accompany me.
-
-                                For booking or more information contact me by email niedziela.kat@gmail.com
+                                <br/>
+                                <br/>
+                                For booking or more information contact me by email <a href="mailto:niedziela.kat@gmail.com">niedziela.kat@gmail.com</a>
                             </div>
                         </div>
                         {/* <div className="col-md-5 col-md-offset-1">
