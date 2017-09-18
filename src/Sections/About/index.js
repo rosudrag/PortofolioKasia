@@ -2,6 +2,7 @@ import React from 'react';
 import { BodyRenderer } from '@phenomic/preset-react-app/lib/client';
 
 const AboutSection = (props) => {
+    console.log(props);
     return (
         <div>
             <BodyRenderer>{props.node.body}</BodyRenderer>
@@ -32,16 +33,29 @@ const AboutSection = (props) => {
                         <div className="col-md-6">
                             <h4>About</h4>
                             <div className="about-content">
-                            <span className="active-color">Hello, I am Katarzyna Niedziela, Musician, Writer, Photographer and Blogger</span>
-                            <p>Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.</p>
-                            <span className="border-dashed"></span>
-                            {/* <img src="img/signature.png" alt=""/> */}
+                                <span className="active-color">Hello, I am Katarzyna Niedziela, Musician, Writer, Photographer and Blogger</span>
+                                <p>Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.</p>
+                                <span className="border-dashed"></span>
+                                {/* <img src="img/signature.png" alt=""/> */}
                             </div>
                         </div>
                         <div className="col-md-5 col-md-offset-1">
+                            <h4>
+                                Flautist for hire
+                                
+                            </h4>
+                            <div className="about-content">
+                                I am currently available for hire for playing flute at all kinds of events in the vicinity of Manchester, UK.
+
+                                A professional pianist is also available to accompany me.
+
+                                For booking or more information contact me by email niedziela.kat@gmail.com
+                            </div>
+                        </div>
+                        {/* <div className="col-md-5 col-md-offset-1">
                             <h4>Basic Information</h4>
                             <ul className="list-group">
-                            {/* <li className="list-group-item">
+                            <li className="list-group-item">
                                 <div className="row">
                                 <div className="col-md-4">
                                     <h6>Address:</h6>
@@ -50,8 +64,8 @@ const AboutSection = (props) => {
                                     <p>43/R/13 Creative Town, Bangladesh</p>
                                 </div>
                                 </div>
-                            </li> */}
-                            {/* <li className="list-group-item">
+                            </li>
+                            <li className="list-group-item">
                                 <div className="row">
                                 <div className="col-md-4">
                                     <h6>Date of Birth:</h6>
@@ -60,7 +74,7 @@ const AboutSection = (props) => {
                                     <p>1 January, 1992</p>
                                 </div>
                                 </div>
-                            </li> */}
+                            </li>
                             <li className="list-group-item">
                                 <div className="row">
                                 <div className="col-md-4">
@@ -92,7 +106,7 @@ const AboutSection = (props) => {
                                 </div>
                             </li>
                             </ul>
-                        </div>
+                        </div> */}
                         </div>
                     </div>
                 </div>
