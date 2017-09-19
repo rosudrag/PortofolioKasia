@@ -18,30 +18,30 @@ export default ({ App, render }: PhenomicHtmlPropsType) => {
         {helmet.script.toComponent()}
         {helmet.noscript.toComponent()}
 
-        <link rel="stylesheet" href="css/vendor/font-awesome.min.css"/>
-        <link rel="stylesheet" href="css/vendor/animate.min.css"/>
-        <link rel="stylesheet" href="css/vendor/owl.carousel.css"/>
-        <link rel="stylesheet" href="css/vendor/owl.transitions.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <script src="js/vendor/modernizr.js"></script>
+        <link rel="stylesheet" href="/css/vendor/font-awesome.min.css"/>
+        <link rel="stylesheet" href="/css/vendor/animate.min.css"/>
+        <link rel="stylesheet" href="/css/vendor/owl.carousel.css"/>
+        <link rel="stylesheet" href="/css/vendor/owl.transitions.css"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <script src="/js/vendor/modernizr.js"></script>
       </head>
       <body {...helmet.bodyAttributes.toComponent()} class="single" className="single">
         <Main />
         <State />
         <Script />
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/vendor/grid.js"></script>
-        <script src="js/vendor/owl.carousel.min.js"></script>
-        <script src="js/vendor/wow.min.js"></script>
-        <script src="js/vendor/jquery.nav.js"></script>
-        <script src="js/vendor/typed.min.js"></script>
-        <script src="js/vendor/jquery.scrollUp.min.js"></script>
-        <script src="js/vendor/scroll.js"></script>
-        <script src="js/vendor/jquery.sticky.js"></script>
-        <script src="js/vendor/jquery.flexnav.min.js"></script>
-        <script src="js/vendor/masonry.pkgd.min.js"></script>
-        <script src="js/vendor/skrollr.js"></script>
-        <script src="js/script.js"></script>
+        <script src="/js/vendor/jquery.js"></script>
+        <script src="/js/vendor/grid.js"></script>
+        <script src="/js/vendor/owl.carousel.min.js"></script>
+        <script src="/js/vendor/wow.min.js"></script>
+        <script src="/js/vendor/jquery.nav.js"></script>
+        <script src="/js/vendor/typed.min.js"></script>
+        <script src="/js/vendor/jquery.scrollUp.min.js"></script>
+        <script src="/js/vendor/scroll.js"></script>
+        <script src="/js/vendor/jquery.sticky.js"></script>
+        <script src="/js/vendor/jquery.flexnav.min.js"></script>
+        <script src="/js/vendor/masonry.pkgd.min.js"></script>
+        <script src="/js/vendor/skrollr.js"></script>
+        <script src="/js/script.js"></script>
       </body>
     </html>
   );

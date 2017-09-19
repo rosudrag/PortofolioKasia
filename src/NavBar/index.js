@@ -34,7 +34,7 @@ const Navigation = (props) => {
                             <div className="menu-button one-page">Menu</div>
                             <nav>
                                 <ul id="navigation-menu" data-breakpoint="992" className="flexnav one-page">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="/">Home</a></li>
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#skills">Skills</a></li>
                                     <li><a href="#education">Education</a></li>
