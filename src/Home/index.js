@@ -32,6 +32,7 @@ let HomeContent = (props) => {
         </section>
       </div>
     );
+    return result;
 };
 
 const getSectionNode = (props, nodeName) => {
@@ -41,13 +42,14 @@ const getSectionNode = (props, nodeName) => {
 };
 
 const MainSection = (props) => {
-    const aboutNode = getSectionNode(props, 'about');
-    const postNodes = props.posts.node.list;
+    // const aboutNode = getSectionNode(props, 'about');
+    // const postNodes = props.posts.node.list;
     return (
       <div className="col-md-12">
-          <AboutSection node={aboutNode} />
+          I work
+          {/* <AboutSection node={aboutNode} />
           <br/>
-          <br/>
+          <br/> */}
           {/* <SkillsSection/> */}
           {/* <br/> */}
           {/* <br/> */}
@@ -65,17 +67,16 @@ const MainSection = (props) => {
     );
 };
 
-const Home = (props) => {
-    const { isLoading } = props;
-    const ready = !isLoading && props.pages.node !== null && props.posts.node !== null && props.sections.node !== null;
-    const content = ready ? <HomeContent {...props} /> : 'Loading...';
+const Home = ({ isLoading }) => {
+    const content = isLoading ? 'Loading...' : <HomeContent {...props} />;
     return (
       <Page>
         <Head>
           <title>Loading</title>
           <meta name="description" content="Katarzyna Niedziela Portfolio" />
         </Head>
-        {content}
+        {isLoading && "Loading..."}
+        {!isLoading && (<HomeContent {...props}/>)}
       </Page>
     );
 };
