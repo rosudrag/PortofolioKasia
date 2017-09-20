@@ -17,7 +17,7 @@ import {
 let HomeContent = (props) => {
     const nodes = props.pages.node.list;
     const homeNode = nodes.find(n => n.id === 'pages\\index');
-    const result = typeof(homeNode) === 'undefined' ? "Loading..." : (
+    const result = typeof (homeNode) === 'undefined' ? 'Loading...' : (
       <div>
         <Head>
             <title>{homeNode.title}</title>
@@ -67,15 +67,15 @@ const MainSection = (props) => {
     );
 };
 
-const Home = ({ isLoading }) => {
-    const content = isLoading ? 'Loading...' : <HomeContent {...props} />;
+const Home = (props) => {
+    const { isLoading } = props;
     return (
       <Page>
         <Head>
           <title>Loading</title>
           <meta name="description" content="Katarzyna Niedziela Portfolio" />
         </Head>
-        {isLoading && "Loading..."}
+        {isLoading && 'Loading...'}
         {!isLoading && (<HomeContent {...props}/>)}
       </Page>
     );
