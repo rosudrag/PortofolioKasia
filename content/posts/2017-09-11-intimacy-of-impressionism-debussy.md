@@ -3,7 +3,7 @@ layout: Post
 title: Intimacy of Impressionism- Debussy
 date: 2017-09-11T20:27:11.366Z
 hero: /assets/logo.jpg
-description: description1
+smallPostDescription: description1
 smallPostImage: /img/single_blog_post_image.jpg
 ---
 # <center>Intimacy of Impressionism - Debussy</center>

@@ -11,7 +11,7 @@ const LittleBlog = (props) => {
                 <Link to={`/${post.id}/`}>
                     <h6>{post.title}</h6>
                 </Link>
-                <p>{post.description}</p>
+                <p>{post.smallPostDescription}</p>
                 <Link to={`/${post.id}/`}>Read more</Link>
             </div>
             <div className="post-meta">
