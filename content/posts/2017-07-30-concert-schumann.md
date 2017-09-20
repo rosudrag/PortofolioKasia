@@ -4,6 +4,7 @@ title: Concert Schumann
 date: 2017-07-30T00:00:00.000Z
 hero: /assets/logo.jpg
 description: description1
+smallPostImage: /img/single_blog_post_image.jpg
 ---
 # <center>The music poetry of Robert Schumann</center>
 

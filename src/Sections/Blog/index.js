@@ -6,11 +6,11 @@ const LittleBlog = (props) => {
     return (
         <div className="col-sm-6 col-md-4">
             <div className="thumbnail rex-blog-section">
-            <img src="http://placehold.it/312x184" alt="..."/>
+            <img src={post.smallPostImage} alt="..."/>
             <div className="rex-caption">
-                <a href="single-blog.html">
-                <h6>{post.title}</h6>
-                </a>
+                <Link to={`/${post.id}/`}>
+                    <h6>{post.title}</h6>
+                </Link>
                 <p>{post.description}</p>
                 <Link to={`/${post.id}/`}>Read more</Link>
             </div>
