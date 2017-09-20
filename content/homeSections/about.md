@@ -1,3 +1,0 @@
----
-title: Katarzyna Niedziela Portfolio
----
