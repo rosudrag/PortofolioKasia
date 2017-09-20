@@ -1,6 +1,0 @@
-Hosting
-----
-
-vultr.com - 45.76.128.35
-
-Static site -> Apache -> setup using https://www.liquidweb.com/kb/how-to-install-apache-on-centos-7/
