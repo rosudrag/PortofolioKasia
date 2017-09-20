@@ -69,7 +69,7 @@ const MainSection = (props) => {
 const Home = (props) => {
     const { isLoading } = props;
     const ready = !isLoading && props.pages.node !== null && props.posts.node !== null && props.sections.node !== null;
-    const content = notReady ? 'Loading...' : <HomeContent {...props}/>;
+    const content = ready ? <HomeContent {...props} /> : 'Loading...';
     return (
       <Page>
         <Head>
