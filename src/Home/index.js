@@ -58,9 +58,9 @@ const MainSection = (props) => {
           {/* <WorkSection/> */}
           {/* <br/> */}
           {/* <br/> */}
-          <BlogSection posts={postNodes}/>
+          {/* <BlogSection posts={postNodes}/>
           <br/>
-          <br/>
+          <br/> */}
           {/* <ContactForm/> */}
       </div>
     );

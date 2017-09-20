@@ -36,10 +36,10 @@ const Navigation = (props) => {
                                 <ul id="navigation-menu" data-breakpoint="992" className="flexnav one-page">
                                     <li><a href="/">Home</a></li>
                                     <li><a href="#about">About</a></li>
-                                    <li><a href="#skills">Skills</a></li>
+                                    {/* <li><a href="#skills">Skills</a></li>
                                     <li><a href="#education">Education</a></li>
                                     <li><a href="#work">Work</a></li>
-                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#contact">Contact</a></li> */}
                                 </ul>
                             </nav>
                         </div>
