@@ -17,7 +17,7 @@ import {
 let HomeContent = (props) => {
     const nodes = props.pages.node.list;
     const homeNode = nodes.find(n => n.id === 'pages\\index');
-    return (
+    const result = typeof(homeNode) === 'undefined' ? "Loading..." : (
       <div>
         <Head>
             <title>{homeNode.title}</title>
@@ -31,7 +31,6 @@ let HomeContent = (props) => {
           </div>
         </section>
       </div>
-
     );
 };
 
