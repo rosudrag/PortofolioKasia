@@ -1,25 +1,33 @@
 import React, { PropTypes } from 'react';
-
-import LatestPosts from '../components/LatestPosts';
 import Page from '../Page';
-import PostHeader from './postHeader';
-
-const defaultTags = 'general';
+import BlogPostWithImage from '../components/BlogPostWithImage';
 
 const Post = (props) => {
-    const pageDate = props.head.date ? new Date(props.head.date) : null;
-    const tags = props.head.tags ? props.head.tags : defaultTags;
-
     return (
-    <Page { ...props } header={<PostHeader pageDate={pageDate} tags={tags}/>}>
-      <hr />
-      <LatestPosts />
+        <div>
+            <section className="main">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <BlogPostWithImage {...props}/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+const PostContainer = (props) => {
+    return (
+    <Page { ...props }>
+        <Post {...props}/>
     </Page>
     );
 };
 
-Post.propTypes = {
+PostContainer.propTypes = {
     head: PropTypes.object.isRequired
 };
 
-export default Post;
+export default PostContainer;

@@ -4,7 +4,7 @@ title: Test!
 date: 2017-09-14T09:55:24.985Z
 hero: /assets/logo.jpg
 smallPostDescription: description1
-smallPostImage: /img/single_blog_post_image.jpg
+smallPostImage: /assets/img/single_blog_post_image.jpg
 ---
 
 | Left-aligned | Center-aligned | Right-aligned |

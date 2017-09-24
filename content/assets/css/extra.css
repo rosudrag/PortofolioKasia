@@ -11,3 +11,12 @@
     font-size: 18px;
     padding-top: 8px;
 }
+
+.phenomic-HeadingAnchor {
+    display:none;
+}
+
+.embedded-video{
+    width: 90%;
+    height: 480px;
+}
