@@ -1,5 +1,4 @@
 import React from 'react';
-import { BodyRenderer } from '@phenomic/preset-react-app/lib/client';
 
 import Avatar from 'material-ui/Avatar';
 import classNames from 'classnames';
@@ -25,7 +24,7 @@ function ImageAvatars(props) {
       <div className={classes.row}>
         <Avatar
           alt="Logo Image"
-          src="/img/profile-img.jpg"
+          src="/assets/img/profile-img.jpg"
           className={classNames(classes.avatar, classes.bigAvatar)}
         />
       </div>
@@ -37,7 +36,6 @@ const MyAvatar = withStyles(styles)(ImageAvatars);
 const AboutSection = (props) => {
     return (
         <div>
-            <BodyRenderer>{props.node.body}</BodyRenderer>
             <div className="about">
                 <div className="hero">
                     <div className="hero-inner">
@@ -54,10 +52,10 @@ const AboutSection = (props) => {
                             {/* <a href="#"><i className="fa fa-instagram"></i></a> */}
                             {/* <a href="#"><i className="fa fa-google-plus-square"></i></a> */}
                         </div>
-                        <div className="hero-btn">
+                        {/* <div className="hero-btn">
                             <a className="btn btn-default rex-primary-btn-effect-No" href="#contact" role="button"><span>Hire Me</span></a>
                             <a className="btn btn-default rex-primary-btn-effect" href="#" role="button">Download CV</a>
-                        </div>
+                        </div> */}
                         </div>
                     </div>
                 </div>
@@ -67,8 +65,6 @@ const AboutSection = (props) => {
                         <div className="col-md-6">
                             <h4>About</h4>
                             <div className="about-content">
-                                <span className="active-color">Hello, I am Katarzyna Niedziela, Musician, Writer, Photographer and Blogger</span>
-                                <br/><br/>
                                 <p>Music is a powerful tool, it can change people's emotions, create a unique atmosphere and express more than the words can say. This is why I love music and why I love performing. I started learning flute when I was fourteen and I played ever since. I have worked with different music genres but, at the moment, I am mostly playing classical and salsa.</p>
                                 <span className="border-dashed"></span>
                                 {/* <img src="img/signature.png" alt=""/> */}

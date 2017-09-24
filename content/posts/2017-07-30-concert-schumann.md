@@ -3,12 +3,10 @@ layout: Post
 title: Concert Schumann
 date: 2017-07-30T00:00:00.000Z
 hero: /assets/logo.jpg
-smallPostDescription: description1
-smallPostImage: /img/single_blog_post_image.jpg
+smallPostDescription: On 22'nd July 2017 I had the pleasure to take part in a beautiful concert 'The Music Poetry...
+smallPostImage: /assets/img/blog/blogpost1.jpg
 ---
-# <center>The music poetry of Robert Schumann</center>
-
-<br><br>
+# The music poetry of Robert Schumann
 
 On 22'nd July 2017 I had the pleasure to take part in a beautiful concert 'The Music Poetry of Robert Schumann'. The event was held by Dean Row Unitarian Chapel in Wilmslow.
 
@@ -18,15 +16,6 @@ It was speculated that the piece was written during one of Schumanns manic episo
 
 Below a video of the performance, hope you will enjoy it!
 
-<br>
-
 Kat.
 
-<br><br>
-
-<center>
-<div class="videoWrapper">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Hbptvx-atsY" frameborder="0" allowfullscreen>
-</iframe>\
-</div>
-</center>
+<center><iframe class="embedded-video" src="https://www.youtube.com/embed/Hbptvx-atsY" frameborder="0" allowfullscreen></iframe>
