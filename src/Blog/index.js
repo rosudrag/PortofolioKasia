@@ -8,23 +8,46 @@ import {
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client';
 
+const map = {
+    p: function View(props: Object) {
+        return <div>{props.children}</div>;
+    },
+    a: function Link(props: Object) {
+        return <a href={props.href} className="auto">{props.children}</a>;
+    }
+};
+
 const PostContent = (props) => {
     const { post } = props;
+    console.log(post);
     return (
     <div className="col-md-12">
-        <BodyRenderer>{post.node.body}</BodyRenderer>
+        <BodyRenderer>{post.body}</BodyRenderer>
+        <BodyRenderer components={map}>
+         {{
+           t: "p",
+           p: { className: "test" },
+           c: [
+             {
+               t: "a",
+               p: { href: "http://test" },
+               c: "Link"
+             }
+           ]
+         }}
+       </BodyRenderer>
     </div>
     );
 };
 
-// const getPost = (props, nodeName) => {
-//     const nodes = props.posts.node.list;
-//     const node = nodes.find(n => n.id === 'posts\\' + nodeName);
-//     return node;
-// };
+const getPost = (props, nodeName) => {
+    const nodes = props.posts.node.list;
+    const node = nodes.find(n => n.id === nodeName);
+    return node;
+};
 
 let BlogContent = (props) => {
-    // const post = getPost(props, props.params.splat);
+    const post = getPost(props, props.params.splat);
     return (
       <div>
         <Head>
@@ -34,7 +57,7 @@ let BlogContent = (props) => {
         <section className="main">
           <div className="container">
               <div className="row">
-                <PostContent {...props}/>
+                <PostContent post={post}/>
               </div>
           </div>
         </section>
@@ -59,8 +82,7 @@ const BlogPost = (props) => {
 
 const BlogContainer = createContainer(BlogPost, props => {
     return {
-        posts: query({ path: 'posts' }),
-        post: query({ path: 'posts', id: props.params.splat })
+        posts: query({ path: 'posts' })
     };
 });
 

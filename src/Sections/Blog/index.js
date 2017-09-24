@@ -8,11 +8,11 @@ const LittleBlog = (props) => {
             <div className="thumbnail rex-blog-section">
             <img src={post.smallPostImage} alt="..."/>
             <div className="rex-caption">
-                <Link to={`/${post.id}/`}>
+                <Link to={`/blog/${post.id}/`}>
                     <h6>{post.title}</h6>
                 </Link>
                 <p>{post.smallPostDescription}</p>
-                <Link to={`/${post.id}/`}>Read more</Link>
+                <Link to={`/blog/${post.id}/`}>Read more</Link>
             </div>
             <div className="post-meta">
                 {/* <a href="javascript:void(0)"><i className="fa fa-share-alt"></i></a>

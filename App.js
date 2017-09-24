@@ -8,5 +8,5 @@ import MainEntryPoint from './src/Main';
 export default createApp(MainEntryPoint);
 
 if (module.hot) {
-	module.hot.accept(() => renderApp(MainEntryPoint));
+    module.hot.accept(() => renderApp(MainEntryPoint));
 }

@@ -1,42 +1,86 @@
-import Head from 'react-helmet';
-import React from 'react';
-import { createMuiTheme } from 'material-ui/styles';
-import NavBar from '../../NavBar';
-import { MuiThemeProvider } from 'material-ui/styles';
-import { red, blue, teal } from 'material-ui/colors';
+import React, { PropTypes } from 'react';
+import Helmet from 'react-helmet';
+import warning from 'warning';
+import { joinUri } from 'phenomic';
 
-const theme = createMuiTheme({
-    palette: {
-        primary: blue, // Purple and green play nicely together.
-        secondary: teal,
-        error: red
-    }
-});
+import Navigation from '../../components/Navigation';
+import Banner from '../../components/Banner';
+import MainBody from '../../components/MainBody';
+import asMainComponent from '../../common/asMainComponent';
 
-const Layout = ({ children }) => (
-  <MuiThemeProvider theme={theme}>
-    <div>
-      <Head>
-        <html lang="en" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-        <link rel="icon" type="image/png" href="favicon.png"/>
-      </Head>
-      <NavBar/>
-      <span className="background"></span>
-      {children}
-      <footer>
-        <div className="row">
-          <div className="col-md-12">
-            <p>&copy; Copyright 2017 DRR</p>
-          </div>
+import styles from './index.css';
+
+const constructMeta = (props) => {
+    const { head, __url, pkg } = props;
+    const socialImage = head.hero && head.hero.match('://') ? head.hero : joinUri(process.env.PHENOMIC_USER_URL, head.hero);
+    const metaTitle = head.metaTitle ? head.metaTitle : head.title;
+    return [
+    { property: 'og:type', content: 'article' },
+    { property: 'og:title', content: metaTitle },
+        {
+            property: 'og:url',
+            content: joinUri(process.env.PHENOMIC_USER_URL, __url)
+        },
+    { property: 'og:image', content: socialImage },
+    { property: 'og:description', content: head.description },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: metaTitle },
+    { name: 'twitter:creator', content: `@${ pkg.twitter }` },
+    { name: 'twitter:description', content: head.description },
+    { name: 'twitter:image', content: socialImage },
+    { name: 'description', content: head.description }
+    ];
+};
+
+const BodyContainer = (props) => {
+    const { header, isLoading, body, footer, children } = props;
+    return (
+        <div className={ 'row start-xs ' + styles.wrapper + ' ' + styles.pageContent }>
+            { header }
+            <MainBody isLoading={isLoading} body={body}/>
+            { children }
+            { footer }
         </div>
-        </footer>
+    );
+};
+
+const BodyContainerComponent = asMainComponent(BodyContainer);
+
+const Page = (props, metadata) => {
+    const { __filename, __url, head } = props;
+    const { metadata: { pkg } } = metadata;
+
+    warning(
+    typeof head.title === 'string',
+    `Your page '${ __filename }' needs a title`);
+
+    const metaTitle = head.metaTitle ? head.metaTitle : head.title;
+
+    const meta = constructMeta({ head, __url, pkg });
+
+    return (
+    <div className={ styles.page }>
+      <Helmet title={ metaTitle } meta={ meta } />
+      <Banner head={head}/>
+      <Navigation/>
+      <BodyContainerComponent {...props}/>
     </div>
+    );
+};
 
-  </MuiThemeProvider>
-);
+Page.propTypes = {
+    children: PropTypes.node,
+    isLoading: PropTypes.bool,
+    __filename: PropTypes.string,
+    __url: PropTypes.string,
+    head: PropTypes.object.isRequired,
+    body: PropTypes.string,
+    header: PropTypes.element,
+    footer: PropTypes.element
+};
 
-export default Layout;
+Page.contextTypes = {
+    metadata: PropTypes.object.isRequired
+};
+
+export default Page;
