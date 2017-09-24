@@ -3,12 +3,18 @@ import Helmet from 'react-helmet';
 import warning from 'warning';
 import { joinUri } from 'phenomic';
 
-import Navigation from '../../components/Navigation';
-import Banner from '../../components/Banner';
-import MainBody from '../../components/MainBody';
-import asMainComponent from '../../common/asMainComponent';
+import { createMuiTheme } from 'material-ui/styles';
+import NavBar from '../../NavBar';
+import { MuiThemeProvider } from 'material-ui/styles';
+import { red, blue, teal } from 'material-ui/colors';
 
-import styles from './index.css';
+const theme = createMuiTheme({
+    palette: {
+        primary: blue,
+        secondary: teal,
+        error: red
+    }
+});
 
 const constructMeta = (props) => {
     const { head, __url, pkg } = props;
@@ -33,18 +39,14 @@ const constructMeta = (props) => {
 };
 
 const BodyContainer = (props) => {
-    const { header, isLoading, body, footer, children } = props;
+    const { header, children } = props;
     return (
-        <div className={ 'row start-xs ' + styles.wrapper + ' ' + styles.pageContent }>
+        <div>
             { header }
-            <MainBody isLoading={isLoading} body={body}/>
             { children }
-            { footer }
         </div>
     );
 };
-
-const BodyContainerComponent = asMainComponent(BodyContainer);
 
 const Page = (props, metadata) => {
     const { __filename, __url, head } = props;
@@ -59,12 +61,21 @@ const Page = (props, metadata) => {
     const meta = constructMeta({ head, __url, pkg });
 
     return (
-    <div className={ styles.page }>
-      <Helmet title={ metaTitle } meta={ meta } />
-      <Banner head={head}/>
-      <Navigation/>
-      <BodyContainerComponent {...props}/>
-    </div>
+        <MuiThemeProvider theme={theme}>
+            <div>
+                <Helmet title={ metaTitle } meta={ meta } />
+                <NavBar/>
+                <span className="background"></span>
+                <BodyContainer {...props}/>
+                <footer>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <p>&copy; Copyright 2017 DRR</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </MuiThemeProvider>
     );
 };
 

@@ -5,7 +5,7 @@ import { PageContainer as PhenomicPageContainer } from 'phenomic';
 import AppContainer from './AppContainer';
 import Page from './layouts/Page';
 import PageError from './layouts/PageError';
-import Homepage from './layouts/Homepage';
+import Homepage from './Homepage';
 import TaggedBlogPage from './layouts/TaggedBlogPage';
 import Post from './layouts/Post';
 import Scripts from './scripts';

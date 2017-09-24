@@ -19,7 +19,6 @@ const map = {
 
 const PostContent = (props) => {
     const { post } = props;
-    console.log(post);
     return (
     <div className="col-md-12">
         <BodyRenderer>{post.body}</BodyRenderer>

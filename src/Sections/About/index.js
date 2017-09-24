@@ -1,5 +1,4 @@
 import React from 'react';
-import { BodyRenderer } from '@phenomic/preset-react-app/lib/client';
 
 import Avatar from 'material-ui/Avatar';
 import classNames from 'classnames';
@@ -25,7 +24,7 @@ function ImageAvatars(props) {
       <div className={classes.row}>
         <Avatar
           alt="Logo Image"
-          src="/img/profile-img.jpg"
+          src="/assets/img/profile-img.jpg"
           className={classNames(classes.avatar, classes.bigAvatar)}
         />
       </div>
@@ -37,7 +36,6 @@ const MyAvatar = withStyles(styles)(ImageAvatars);
 const AboutSection = (props) => {
     return (
         <div>
-            <BodyRenderer>{props.node.body}</BodyRenderer>
             <div className="about">
                 <div className="hero">
                     <div className="hero-inner">
