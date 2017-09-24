@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Page from '../Page';
-import BlogPostWithImage from '../components/BlogPostWithImage';
+import BlogPostWithoutImage from '../components/BlogPostWithoutImage';
 
 const Post = (props) => {
     return (
@@ -9,7 +9,9 @@ const Post = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <BlogPostWithImage {...props}/>
+                            <BlogPostWithoutImage {...props}/>
+                            <br/>
+                            <br/>
                         </div>
                     </div>
                 </div>

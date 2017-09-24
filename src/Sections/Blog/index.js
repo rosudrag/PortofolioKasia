@@ -8,21 +8,21 @@ const LittleBlog = (props) => {
     const { post } = props;
     return (
         <div className="col-sm-6 col-md-4">
-            <div className="thumbnail rex-blog-section">
-            <img src={post.smallPostImage} alt="Image Alt"/>
-            <div className="rex-caption">
-                <Link to={`/blog/${post.id}/`}>
-                    <h6>{post.title}</h6>
-                </Link>
-                <p>{post.smallPostDescription}</p>
-                <Link to={`${post.__url}`}>Read more</Link>
-            </div>
-            <div className="post-meta">
-                {/* <a href="javascript:void(0)"><i className="fa fa-share-alt"></i></a>
-                <a href="javascript:void(0)"><i className="fa fa-comment"></i>20</a>
-                <a href="javascript:void(0)"><i className="fa fa-heart"></i>65</a> */}
-            </div>
-            </div>
+            <Link to={`${post.__url}`}>
+                <div className="thumbnail rex-blog-section">
+                    <img src={post.smallPostImage} alt="Image Alt"/>
+                    <div className="rex-caption">
+                            <h6>{post.title}</h6>
+                        <p>{post.smallPostDescription}</p>
+                    </div>
+                    <div className="post-meta">
+                        {/* <a href="javascript:void(0)"><i className="fa fa-share-alt"></i></a>
+                        <a href="javascript:void(0)"><i className="fa fa-comment"></i>20</a>
+                        <a href="javascript:void(0)"><i className="fa fa-heart"></i>65</a> */}
+                    </div>
+                </div>
+            </Link>
+            
         </div>
     );
 };

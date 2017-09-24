@@ -14,7 +14,7 @@ let Header = (props) => {
                         </div>
                     </div>
                     <div className="col-md-6 header-contact-address">
-                        <a href="mailto:name@yourdomain.com">niedziela.kat@gmail.com</a><br/>
+                        <a href="mailto:niedziela.kat@gmail.com">niedziela.kat@gmail.com</a><br/>
                         {/* <a href="tel:+00123456789">+00 (123) 456 789</a> */}
                     </div>
                 </div>
