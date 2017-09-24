@@ -8,33 +8,11 @@ import {
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client';
 
-const map = {
-    p: function View(props: Object) {
-        return <div>{props.children}</div>;
-    },
-    a: function Link(props: Object) {
-        return <a href={props.href} className="auto">{props.children}</a>;
-    }
-};
-
 const PostContent = (props) => {
     const { post } = props;
     return (
     <div className="col-md-12">
         <BodyRenderer>{post.body}</BodyRenderer>
-        <BodyRenderer components={map}>
-         {{
-           t: "p",
-           p: { className: "test" },
-           c: [
-             {
-               t: "a",
-               p: { href: "http://test" },
-               c: "Link"
-             }
-           ]
-         }}
-       </BodyRenderer>
     </div>
     );
 };

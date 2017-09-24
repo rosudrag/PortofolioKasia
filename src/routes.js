@@ -3,11 +3,10 @@ import { Route } from 'react-router';
 import { PageContainer as PhenomicPageContainer } from 'phenomic';
 
 import AppContainer from './AppContainer';
-import Page from './layouts/Page';
-import PageError from './layouts/PageError';
+import Page from './Page';
+import PageError from './PageError';
 import Homepage from './Homepage';
-import TaggedBlogPage from './layouts/TaggedBlogPage';
-import Post from './layouts/Post';
+import Post from './Post';
 import Scripts from './scripts';
 import logPageView from './log-google-analytics';
 
@@ -20,8 +19,7 @@ const PageContainer = (props) => (
             Page,
             PageError,
             Homepage,
-            Post,
-            TaggedBlogPage
+            Post
         }}
       />
       <Scripts/>

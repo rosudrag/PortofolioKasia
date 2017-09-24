@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import LatestPosts from '../../components/LatestPosts';
+import LatestPosts from '../components/LatestPosts';
 import Page from '../Page';
 import PostHeader from './postHeader';
 

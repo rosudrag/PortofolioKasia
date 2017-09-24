@@ -5,7 +5,7 @@ import BlogSection from '../Sections/Blog';
 import WorkSection from '../Sections/Work';
 import SkillsSection from '../Sections/Skills';
 import EducationSection from '../Sections/Education';
-import Page from '../layouts/Page';
+import Page from '../Page';
 
 let HomeBody = (props) => {
     return (
