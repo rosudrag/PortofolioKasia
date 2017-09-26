@@ -7652,9 +7652,6 @@ footer {
     margin-top: 20px; }
   .media-description {
     padding: 20px 14px 20px 49px; }
-  .video iframe {
-    max-width: 292px;
-    max-height: 178px; }
   .work-img img {
     min-height: 242px; }
   .featured-box .col-md-6 {
